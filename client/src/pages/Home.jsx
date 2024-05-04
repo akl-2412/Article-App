@@ -24,7 +24,7 @@ export default function Home() {
         <h1 className='text-3xl font-bold lg:text-6xl'>Welcome to Article App </h1>
         <p className='text-gray-500 text-xs sm:text-sm'>
           Here you'll find a variety of articles and tutorials on topics such as
-          web development, software engineering, and programming languages.
+          web development,python,software engineering, and programming languages.
         </p>
         <Link
           to='/search'
