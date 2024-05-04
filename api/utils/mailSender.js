@@ -1,8 +1,8 @@
 import nodemailer from 'nodemailer';
 
-export const mailSender = async (email, title, body) => {                            // with the help of this function we send mail of otp;      
+export const mailSender = async (email, title, body) => {                             
     try{
-            let transporter = nodemailer.createTransport({                    // we send mail with the help of transporter and here MAIL_USER , MAIL_PASS contain app password of that email which send email 
+            let transporter = nodemailer.createTransport({                   
                 host:process.env.MAIL_HOST,                               
                 auth:{
                     user: process.env.MAIL_USER,                           
@@ -11,7 +11,7 @@ export const mailSender = async (email, title, body) => {                       
             })
 
             let info = await transporter.sendMail({
-                from: 'StudyNotion - by Abhikant Singh',
+                from: 'Article App - by Anurag lal',
                 to:`${email}`,
                 subject: `${title}`,
                 html: `${body}`,
