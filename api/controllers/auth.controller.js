@@ -142,7 +142,7 @@ export const resetPasswordToken = async (req,res,next)=>{
                                         },
                                         {new:true});                  // {new:true} added because it return updated object so updatedDetails contain updated details;
         
-        const url = `http://localhost:5173/update-password/${token}`                              //create url
+        const url = `https://article-app-2.onrender.com/update-password/${token}`                              //create url
         await mailSender(email, "Password Reset Link",`Your Link for email verification is ${url}. Please click this url to reset your password.`);   //send mail containing the url
                          
         return res.json({                                                                         //return response
